@@ -23,6 +23,10 @@ namespace VRTK
             }
         }
 
+       public void SetInactive()
+        {
+            Tooltip.SetActive(false);
+        }
 
 
     }

@@ -1,4 +1,5 @@
-﻿// Object Tooltip|Prefabs|0020
+﻿//This is a modified version of VRTK Asset
+// Object Tooltip|Prefabs|0020
 namespace VRTK
 {
     using UnityEngine;
@@ -13,7 +14,7 @@ namespace VRTK
     /// <example>
     /// `VRTK/Examples/029_Controller_Tooltips` displays two cubes that have an object tooltip added to them along with tooltips that have been added to the controllers.
     /// </example>
-    public class VRTK_ObjectTooltip : MonoBehaviour
+    public class Object_Info : MonoBehaviour
     {
         [Tooltip("The text that is displayed on the tooltip.")]
         public string displayText;
@@ -30,7 +31,7 @@ namespace VRTK
         [Tooltip("The colour to use for the text on the tooltip.")]
         public Color fontColor = Color.black;
         [Tooltip("The colour to use for the background container of the tooltip.")]
-        public Color containerColor;
+        public Sprite containerSprite;
         [Tooltip("The colour to use for the line drawn between the tooltip and the destination transform.")]
         public Color lineColor = Color.black;
 
@@ -68,19 +69,19 @@ namespace VRTK
 
         private void SetContainer()
         {
-            transform.FindChild("TooltipCanvas").GetComponent<RectTransform>().sizeDelta = containerSize;
+           // transform.FindChild("TooltipCanvas").GetComponent<RectTransform>().sizeDelta = containerSize;
             var tmpContainer = transform.FindChild("TooltipCanvas/UIContainer");
-            tmpContainer.GetComponent<RectTransform>().sizeDelta = containerSize;
-            tmpContainer.GetComponent<Image>().color = containerColor;
+          //  tmpContainer.GetComponent<RectTransform>().sizeDelta = containerSize;
+            tmpContainer.GetComponent<Image>().overrideSprite = containerSprite;
         }
 
         private void SetText(string name)
         {
-            var tmpText = transform.FindChild("TooltipCanvas/" + name).GetComponent<Text>();
-            tmpText.material = Resources.Load("UIText") as Material;
-            tmpText.text = displayText.Replace("\\n", "\n");
-            tmpText.color = fontColor;
-            tmpText.fontSize = fontSize;
+            //var tmpText = transform.FindChild("TooltipCanvas/" + name).GetComponent<Text>();
+            //tmpText.material = Resources.Load("UIText") as Material;
+           // tmpText.text = displayText.Replace("\\n", "\n");
+           // tmpText.color = fontColor;
+           // tmpText.fontSize = fontSize;
         }
 
         private void SetLine()

@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: jacket
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: Cursor
+  m_Shader: {fileID: 4800000, guid: 1d91a0457b4ab7a458a9eac79648a51b, type: 3}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
   m_CustomRenderQueue: -1
@@ -48,7 +48,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: bbedbaad871047446875f80c1e76e047, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2db89a771043d7b4eb9d26622f6b97c7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -76,6 +76,9 @@ Material:
     - first:
         name: _BumpScale
       second: 1
+    - first:
+        name: _ColorMask
+      second: 15
     - first:
         name: _Cutoff
       second: 0.5
@@ -107,6 +110,12 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
+        name: _RimPower
+      second: 3
+    - first:
+        name: _Shininess
+      second: 0.078125
+    - first:
         name: _SmoothnessTextureChannel
       second: 0
     - first:
@@ -116,7 +125,25 @@ Material:
         name: _SrcBlend
       second: 1
     - first:
+        name: _Stencil
+      second: 0
+    - first:
+        name: _StencilComp
+      second: 8
+    - first:
+        name: _StencilOp
+      second: 0
+    - first:
+        name: _StencilReadMask
+      second: 255
+    - first:
+        name: _StencilWriteMask
+      second: 255
+    - first:
         name: _UVSec
+      second: 0
+    - first:
+        name: _UseUIAlphaClip
       second: 0
     - first:
         name: _ZWrite
@@ -128,3 +155,9 @@ Material:
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
+    - first:
+        name: _RimColor
+      second: {r: 0.25999996, g: 0.18999997, b: 0.15999997, a: 0}
+    - first:
+        name: _SpecColor
+      second: {r: 0.5, g: 0.5, b: 0.5, a: 1}
