@@ -22,8 +22,9 @@ public class Fade_InOut : MonoBehaviour {
     void lerpAlpha()
     {
         //The alternative for a flashing object (thanks StackOverflow)
-        //float lerp = Mathf.PingPong(Time.time, duration) / duration
-        lerp = Mathf.MoveTowards(lerp, duration, 0.0025f);
+        float lerp = Mathf.PingPong(Time.time, duration) / duration;
+        alpha = Mathf.Lerp(1.0f, 0.0f, lerp);
+        /*lerp = Mathf.MoveTowards(lerp, duration, 0.0025f);
         if (startingAlpha > 0.95f)
         {
             alpha = Mathf.Lerp(1.0f, 0.0f, lerp);
@@ -31,6 +32,7 @@ public class Fade_InOut : MonoBehaviour {
         {
             alpha = Mathf.Lerp(0.0f, 1.0f, lerp);
         }
+        */
         Color color = gameObject.GetComponent<Renderer>().material.color;
         color.a = alpha;
         gameObject.GetComponent<Renderer>().material.SetColor("_Color",color);
