@@ -13,6 +13,7 @@ TagManager:
   - Arm
   - Leg
   - Tooltips
+  - Trigger
   layers:
   - Default
   - TransparentFX
