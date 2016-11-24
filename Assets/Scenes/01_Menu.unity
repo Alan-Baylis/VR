@@ -312,13 +312,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 53169769}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.117, z: -0.139}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.116999984, z: -0.13900003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 190751365}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!82 &53169771
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1022,8 +1022,8 @@ Transform:
   - {fileID: 1663135996}
   - {fileID: 880614526}
   - {fileID: 233747886}
-  - {fileID: 53169770}
   - {fileID: 1071596423}
+  - {fileID: 53169770}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &212553502 stripped
@@ -1692,35 +1692,6 @@ Transform:
   - {fileID: 838201395}
   m_Father: {fileID: 0}
   m_RootOrder: 5
---- !u!21 &650087757
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Sprites/Default
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs:
-    - first:
-        name: _MainTex
-      second:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - first:
-        name: PixelSnap
-      second: 0
-    m_Colors:
-    - first:
-        name: _Color
-      second: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &653824046
 GameObject:
   m_ObjectHideFlags: 0
@@ -3639,6 +3610,7 @@ GameObject:
   - 114: {fileID: 697390198}
   - 114: {fileID: 697390197}
   - 114: {fileID: 697390196}
+  - 114: {fileID: 697390204}
   m_Layer: 0
   m_Name: Controller (left)
   m_TagString: Untagged
@@ -3707,13 +3679,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelElementPaths:
-    bodyModelPath: 
-    triggerModelPath: 
-    leftGripModelPath: 
-    rightGripModelPath: 
-    touchpadModelPath: 
-    appMenuModelPath: 
-    systemMenuModelPath: 
+    bodyModelPath: Model/body
+    triggerModelPath: Model/trigger
+    leftGripModelPath: Model/lgrip
+    rightGripModelPath: Model/rgrip
+    touchpadModelPath: Model/trackpad
+    appMenuModelPath: Model/button
+    systemMenuModelPath: Model/sys_button
   elementHighlighterOverrides:
     body: {fileID: 0}
     trigger: {fileID: 0}
@@ -3799,6 +3771,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 1000013147245382, guid: 95cbc27c8a4d84342a051108f2c6a3e8, type: 2}
+--- !u!114 &697390204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 697390195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38500e9462aab7f4eb82c421246fe7ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &717448298
 Prefab:
   m_ObjectHideFlags: 0
@@ -4283,7 +4266,7 @@ MeshFilter:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886524903}
-  m_Mesh: {fileID: 1241745399}
+  m_Mesh: {fileID: 1244081092}
 --- !u!23 &886524911
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4298,7 +4281,7 @@ MeshRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 650087757}
+  - {fileID: 2115390034}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -4770,7 +4753,8 @@ GameObject:
   - 33: {fileID: 1071596428}
   - 65: {fileID: 1071596427}
   - 23: {fileID: 1071596426}
-  - 114: {fileID: 1071596425}
+  - 114: {fileID: 1071596424}
+  - 82: {fileID: 1071596425}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -4790,8 +4774,8 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 190751365}
-  m_RootOrder: 4
---- !u!114 &1071596425
+  m_RootOrder: 3
+--- !u!114 &1071596424
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -4799,11 +4783,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1071596422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Script: {fileID: 11500000, guid: 330031a3f7205bb4b86ec2059af0a86a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   highlightOnTouch: 1
-  touchHighlightColor: {r: 0.9632353, g: 0.9632353, b: 0.9632353, a: 0}
+  touchHighlightColor: {r: 1, g: 0, b: 0, a: 0}
   rumbleOnTouch: {x: 0, y: 0}
   allowedTouchControllers: 0
   hideControllerOnTouch: 0
@@ -4830,10 +4814,85 @@ MonoBehaviour:
   holdButtonToUse: 0
   useOverrideButton: 3
   pointerActivatesUseAction: 0
-  rumbleOnUse: {x: 0, y: 0}
+  rumbleOnUse: {x: 0.1, y: 350}
   allowedUseControllers: 0
   hideControllerOnUse: 0
   usingState: 0
+--- !u!82 &1071596425
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1071596422}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243000013787410818, guid: 9f0a73c3822eb5842b77f38a46047904,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 2de879e133da4b34199dfbc3a03e9e31, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 1
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.1
+  MaxDistance: 1
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0.74
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!23 &1071596426
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4847,7 +4906,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 33af27359b49eda48829e2c0bf1e12b8, type: 2}
+  - {fileID: 2100000, guid: 43abd98297498d2438eda84db78b38c7, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
@@ -5346,7 +5405,7 @@ Transform:
   - {fileID: 408164421}
   m_Father: {fileID: 1900070661}
   m_RootOrder: 0
---- !u!43 &1241745399
+--- !u!43 &1244081092
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -6566,7 +6625,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.386
+      value: -0.361
       objectReference: {fileID: 0}
     - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6574,7 +6633,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 1.025
+      value: 0.206
       objectReference: {fileID: 0}
     - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
       propertyPath: m_LocalRotation.x
@@ -6595,6 +6654,55 @@ Prefab:
     - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
       propertyPath: m_RootOrder
       value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000013735820428, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
+        type: 2}
+      propertyPath: playsOnlyOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012923978612, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000013409474604, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013757283508, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013836683932, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010909462228, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010945096312, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013159284672, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010549678264, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011236127284, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013767902568, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011020027794, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
@@ -7032,6 +7140,7 @@ GameObject:
   - 114: {fileID: 2096209810}
   - 114: {fileID: 2096209809}
   - 114: {fileID: 2096209817}
+  - 114: {fileID: 2096209819}
   m_Layer: 0
   m_Name: Controller (right)
   m_TagString: Untagged
@@ -7100,13 +7209,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   modelElementPaths:
-    bodyModelPath: 
-    triggerModelPath: 
-    leftGripModelPath: 
-    rightGripModelPath: 
-    touchpadModelPath: 
-    appMenuModelPath: 
-    systemMenuModelPath: 
+    bodyModelPath: Model/body
+    triggerModelPath: Model/trigger
+    leftGripModelPath: Model/lgrip
+    rightGripModelPath: Model/rgrip
+    touchpadModelPath: Model/trackpad
+    appMenuModelPath: Model/button
+    systemMenuModelPath: Model/sys_button
   elementHighlighterOverrides:
     body: {fileID: 0}
     trigger: {fileID: 0}
@@ -7240,3 +7349,43 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 1000013147245382, guid: 95cbc27c8a4d84342a051108f2c6a3e8, type: 2}
+--- !u!114 &2096209819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2096209808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38500e9462aab7f4eb82c421246fe7ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!21 &2115390034
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Sprites/Default
+  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs:
+    - first:
+        name: _MainTex
+      second:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - first:
+        name: PixelSnap
+      second: 0
+    m_Colors:
+    - first:
+        name: _Color
+      second: {r: 1, g: 1, b: 1, a: 1}

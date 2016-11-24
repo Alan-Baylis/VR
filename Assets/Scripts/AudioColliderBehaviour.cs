@@ -3,9 +3,10 @@ using System.Collections;
 
 public class AudioColliderBehaviour : MonoBehaviour {
 
-    [Tooltip("Use with caution: counts only, when player has entered the volume.")]
+    [Tooltip("Use with caution: evaluates only, if player has entered the volume.")]
     public bool playsOnlyOnce = false;
     private bool hasBeenPlayed = false;
+
 
     // Use this for initialization
     void Start()
