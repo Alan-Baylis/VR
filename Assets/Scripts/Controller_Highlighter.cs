@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+
 namespace VRTK.Examples
 {
     public class Controller_Highlighter : MonoBehaviour {
@@ -9,6 +10,7 @@ namespace VRTK.Examples
         private VRTK_ControllerTooltips tooltips;
         private VRTK_ControllerActions actions;
         private VRTK_ControllerEvents events;
+        private VRTK_InteractTouch interactions;
 
         private void Start()
         {
@@ -21,8 +23,13 @@ namespace VRTK.Examples
             events = GetComponent<VRTK_ControllerEvents>();
             actions = GetComponent<VRTK_ControllerActions>();
             tooltips = GetComponentInChildren<VRTK_ControllerTooltips>();
+            interactions = GetComponent<VRTK_InteractTouch>();
 
-            //Setup controller event listeners
+
+        //Setup controller event listeners
+            interactions.ControllerTouchInteractableObject += new ObjectInteractEventHandler(ControllerTouchInteractableObject);
+            interactions.ControllerUntouchInteractableObject += new ObjectInteractEventHandler(ControllerUntouchInteractableObject);
+
             events.TriggerPressed += new ControllerInteractionEventHandler(DoTriggerPressed);
             events.TriggerReleased += new ControllerInteractionEventHandler(DoTriggerReleased);
 
@@ -37,6 +44,25 @@ namespace VRTK.Examples
 
             tooltips.ToggleTips(false);
         }
+
+        private void ControllerTouchInteractableObject(object sender, ObjectInteractEventArgs e)
+        {
+            //By accessing interactions.GetTouchedObject(), we can use different methods here
+            tooltips.ToggleTips(true, VRTK_ControllerTooltips.TooltipButtons.TriggerTooltip);
+            actions.ToggleHighlightTrigger(true, Color.yellow, 0.5f);
+            actions.SetControllerOpacity(0.8f);
+        }
+
+        private void ControllerUntouchInteractableObject(object sender, ObjectInteractEventArgs e)
+        {
+            tooltips.ToggleTips(false, VRTK_ControllerTooltips.TooltipButtons.TriggerTooltip);
+            actions.ToggleHighlightTrigger(false);
+            if (!interactions.GetTouchedObject())
+            {
+                actions.SetControllerOpacity(1f);
+            }
+        }
+
 
         private void DoTriggerPressed(object sender, ControllerInteractionEventArgs e)
         {
@@ -106,6 +132,7 @@ namespace VRTK.Examples
             }
         }
 
+    /*Collision, not used atm
         private void OnTriggerEnter(Collider collider)
         {
             if (highlightBodyOnlyOnCollision)
@@ -129,5 +156,6 @@ namespace VRTK.Examples
                 actions.ToggleHighlightController(false);
             }
         }
+      */
     }
 }
