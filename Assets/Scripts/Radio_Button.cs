@@ -6,6 +6,7 @@ namespace VRTK
     public class Radio_Button : VRTK_InteractableObject
     {
         private bool activated = true;
+        public AudioSource ButtonSource;
 
 
         public override void StartUsing(GameObject currentUsingObject)
@@ -17,12 +18,12 @@ namespace VRTK
               if(activated)
               {
                 Debug.Log("Pausing");
-                GetComponentInParent<AudioSource>().Pause();
+                ButtonSource.Pause();
                 activated = false;
               } else
               {
                 Debug.Log("Playin");
-                GetComponentInParent<AudioSource>().Play();
+                ButtonSource.Play();
                 activated = true;
               }
               
