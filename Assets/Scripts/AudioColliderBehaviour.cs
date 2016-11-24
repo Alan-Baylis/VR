@@ -1,47 +1,67 @@
 ﻿using UnityEngine;
 using System.Collections;
-namespace VRTK {
-    public class AudioColliderBehaviour : MonoBehaviour {
+namespace VRTK
+{
+    public class AudioColliderBehaviour : MonoBehaviour
+    {
 
         [Tooltip("Use with caution: evaluates only, if player has entered the volume.")]
         public bool playsOnlyOnce = false;
+        [Tooltip("Should the playback be continued on exit?")]
+        public bool pauseOnExit = false;
+        [Tooltip("Hide this trigger on collision?")]
+        public bool hideOnTrigger = false;
+
+
         private bool hasBeenPlayed = false;
 
-        private VRTK_HeadsetCollision collisiondetector;
 
 
         // Use this for initialization
         void Start()
         {
-            collisiondetector = GameObject.FindGameObjectWithTag("CameraRig").GetComponent<VRTK_HeadsetCollision>();
-            if(!collisiondetector)
-            {
-                Debug.Log("Audio: Collider initialization failed");
-            }
-            collisiondetector.HeadsetCollisionDetect += new HeadsetCollisionEventHandler(HeadsetCollision);
+
         }
 
-        void HeadsetCollision(object sender, HeadsetCollisionEventArgs e) {
-
-            Debug.Log("Headset detected");
-
-            if (playsOnlyOnce && !hasBeenPlayed)
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.GetComponentInParent<VRTK_PlayerObject>().objectType == VRTK_PlayerObject.ObjectTypes.Headset)
             {
-                StartCoroutine(FadeAudioIn());
-                hasBeenPlayed = true;
-            } else if (playsOnlyOnce && hasBeenPlayed) {
-                Debug.Log("Tämä pätkä soiteltiin jo.");
-            } else
-            {
-                StartCoroutine(FadeAudioIn());
+                if (playsOnlyOnce && !hasBeenPlayed)
+                {
+                    StartCoroutine(FadeAudioIn());
+                    hasBeenPlayed = true;
+                }
+                else if (playsOnlyOnce && hasBeenPlayed)
+                {
+                    Debug.Log("Tämä pätkä soiteltiin jo.");
+                }
+                else
+                {
+                    StartCoroutine(FadeAudioIn());
+                }
             }
+
+            if (hideOnTrigger)
+            {
+                Renderer[] renderers = GetComponentsInChildren<Renderer>();
+
+                foreach (Renderer renderer in renderers)
+                {
+                    renderer.enabled = false;
+                }
+            }
+
 
         }
 
         void OnTriggerExit(Collider other)
         {
             Debug.Log("Something exited the trigger volume.");
-            StartCoroutine(FadeAudioOut());
+            if (pauseOnExit)
+            {
+                StartCoroutine(FadeAudioOut());
+            }
 
         }
 
@@ -67,7 +87,8 @@ namespace VRTK {
             }
         }
         // Update is called once per frame
-        void Update() {
+        void Update()
+        {
 
         }
     }
