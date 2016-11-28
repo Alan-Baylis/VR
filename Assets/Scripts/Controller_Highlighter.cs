@@ -57,10 +57,8 @@ namespace VRTK.Examples
         {
             tooltips.ToggleTips(false, VRTK_ControllerTooltips.TooltipButtons.TriggerTooltip);
             actions.ToggleHighlightTrigger(false);
-            if (!interactions.GetTouchedObject())
-            {
-                actions.SetControllerOpacity(1f);
-            }
+            actions.SetControllerOpacity(1f);
+
         }
 
 

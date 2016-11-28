@@ -40,19 +40,19 @@ namespace VRTK
                 {
                     StartCoroutine(FadeAudioIn());
                 }
-            }
 
-            if (hideOnTrigger)
-            {
-                Renderer[] renderers = GetComponentsInChildren<Renderer>();
 
-                foreach (Renderer renderer in renderers)
+                if (hideOnTrigger)
                 {
-                    renderer.enabled = false;
+                    Renderer[] renderers = GetComponentsInChildren<Renderer>();
+
+                    foreach (Renderer renderer in renderers)
+                    {
+                        renderer.enabled = false;
+                    }
                 }
+
             }
-
-
         }
 
         void OnTriggerExit(Collider other)
