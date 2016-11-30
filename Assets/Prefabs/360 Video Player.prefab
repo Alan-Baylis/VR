@@ -37,7 +37,7 @@ GameObject:
   - 33: {fileID: 33000011361102772}
   - 135: {fileID: 135000011926700608}
   - 23: {fileID: 23000011172359714}
-  - 114: {fileID: 114000010851965160}
+  - 114: {fileID: 114000012110033660}
   m_Layer: 0
   m_Name: Both eyes
   m_TagString: Untagged
@@ -108,7 +108,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000013424619628}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114000010851965160
+--- !u!114 &114000012110033660
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -116,10 +116,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000013424619628}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 445b362b7178e7a4f9f604b2ab22d4e1, type: 3}
+  m_Script: {fileID: 11500000, guid: 17ff68aac63c8274fb51bddad8df1d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Video: {fileID: 0}
+  playOnAwake: 1
+  mediaPath: 
+  onInitComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+  onVideoEnd:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
 --- !u!135 &135000011926700608
 SphereCollider:
   m_ObjectHideFlags: 1
