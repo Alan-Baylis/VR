@@ -37,7 +37,7 @@ public class LevelChanger : MonoBehaviour {
                 int currentIndex = SceneManager.GetActiveScene().buildIndex;
 
                 // Load next level based on build list (File->Build settings->Scenes In Build)
-                 SceneManager.LoadScene("02_testscene"); 
+                 SceneManager.LoadScene("road"); 
 
 			}
 			lastUsePressedState = controller.usePressed;

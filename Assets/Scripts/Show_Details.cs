@@ -83,7 +83,7 @@ namespace VRTK
         {
             float alpha = 0.0f;
             float lerp = 0.0f;
-
+            
             while (Tooltip.GetComponent<CanvasGroup>().alpha != 1)
             {   
                 lerp = Mathf.MoveTowards(lerp, 5, 0.02f);
