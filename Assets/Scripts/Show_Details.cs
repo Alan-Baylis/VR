@@ -14,40 +14,38 @@ namespace VRTK
             Tooltip.GetComponent<CanvasGroup>().alpha = 0;
         }
 
-        override public void StartTouching(GameObject currentTouchingObject)
+        override public void StartUsing(GameObject currentUsingObject)
         {
-            if (IsTouched())
+            Debug.Log("Clicked item");
+            OnInteractableObjectUsed(SetInteractableObjectEvent(currentUsingObject));
+            usingObject = currentUsingObject;
+            if (isShown)
             {
-                return;
+                StartCoroutine(FadeOut());
+                isShown = false;
+
             }
-            if (!touchingObjects.Contains(currentTouchingObject))
+            else
             {
-                touchingObjects.Add(currentTouchingObject);
-                OnInteractableObjectTouched(SetInteractableObjectEvent(currentTouchingObject));
+                CloseOtherTooltips();
+                string name = this.name;
+                GameObject.FindGameObjectWithTag("SceneSelector").GetComponentInChildren<SceneSelectorObject>().ChangeContext(name);
 
-                if (isShown)
-                {
-                    StartCoroutine(FadeOut());
-                    isShown = false;
+                //Positions the billboard according to player height
+                GameObject camera = GameObject.FindWithTag("MainCamera");
+                float x = Tooltip.GetComponent<Transform>().position.x;
+                float z = Tooltip.GetComponent<Transform>().position.z;
+                Debug.Log("Transform: ");
+                Debug.Log(x);
+                Debug.Log(camera.GetComponent<Transform>().position.y);
+                Debug.Log(z);
+                Vector3 NewPosition = new Vector3(x, (camera.GetComponent<Transform>().position.y - 0.05f), z);
+                Tooltip.GetComponent<Transform>().position = NewPosition;
+                StartCoroutine(FadeIn());
+                isShown = true;
 
-                }
-                else
-                {
-                    CloseOtherTooltips();
-                    GameObject camera = GameObject.FindWithTag("MainCamera");
-                    float x = Tooltip.GetComponent<Transform>().position.x;
-                    float z = Tooltip.GetComponent<Transform>().position.z;
-                    Debug.Log("Transform: ");
-                    Debug.Log(x);
-                    Debug.Log(camera.GetComponent<Transform>().position.y);
-                    Debug.Log(z);
-                    Vector3 NewPosition = new Vector3(x, (camera.GetComponent<Transform>().position.y - 0.05f), z);
-                    Tooltip.GetComponent<Transform>().position = NewPosition;
-                    StartCoroutine(FadeIn());
-                    isShown = true;
-
-                }
             }
+
         }
 
         public void CloseThisTooltip()
@@ -56,6 +54,7 @@ namespace VRTK
             {
                 StartCoroutine(FadeOut());
                 isShown = false;
+                GameObject.FindGameObjectWithTag("SceneSelector").GetComponentInChildren<SceneSelectorObject>().DisableSystem();
             }
         }
 
@@ -83,9 +82,9 @@ namespace VRTK
         {
             float alpha = 0.0f;
             float lerp = 0.0f;
-            
+
             while (Tooltip.GetComponent<CanvasGroup>().alpha != 1)
-            {   
+            {
                 lerp = Mathf.MoveTowards(lerp, 5, 0.02f);
                 alpha = Mathf.Lerp(0.0f, 1.0f, lerp);
                 Tooltip.GetComponent<CanvasGroup>().alpha = alpha;

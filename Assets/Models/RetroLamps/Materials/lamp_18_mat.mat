@@ -133,7 +133,7 @@ Material:
       second: 1
     - first:
         name: _Glossiness
-      second: 0.5
+      second: 0.427
     - first:
         name: _GlossyReflections
       second: 1
@@ -242,7 +242,7 @@ Material:
       second: {r: 0.17841695, g: 0.26348287, b: 0.32352942, a: 0}
     - first:
         name: _SpecColor
-      second: {r: 0.029195482, g: 0.44594625, b: 0.7941176, a: 1}
+      second: {r: 0.09515572, g: 0.35017306, b: 0.64705884, a: 1}
     - first:
         name: g_vWorldAlignedNormalTangentU
       second: {r: -1, g: 0, b: 0, a: 0}
