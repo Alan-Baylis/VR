@@ -30,6 +30,7 @@ namespace VRTK
                 CloseOtherTooltips();
                 string name = this.name;
                 GameObject.FindGameObjectWithTag("SceneSelector").GetComponentInChildren<SceneSelectorObject>().ChangeContext(name);
+                GameObject.FindGameObjectWithTag("Portal").GetComponent<SteamVR_LoadLevel>().levelName = name;
 
                 //Positions the billboard according to player height
                 GameObject camera = GameObject.FindWithTag("MainCamera");
