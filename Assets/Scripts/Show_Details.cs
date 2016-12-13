@@ -14,11 +14,10 @@ namespace VRTK
             Tooltip.GetComponent<CanvasGroup>().alpha = 0;
         }
 
-        override public void StartUsing(GameObject currentUsingObject)
+        public override void OnInteractableObjectUsed(InteractableObjectEventArgs e)
         {
+            base.OnInteractableObjectUsed(e);
             Debug.Log("Clicked item");
-            OnInteractableObjectUsed(SetInteractableObjectEvent(currentUsingObject));
-            usingObject = currentUsingObject;
             if (isShown)
             {
                 StartCoroutine(FadeOut());
@@ -28,9 +27,9 @@ namespace VRTK
             else
             {
                 CloseOtherTooltips();
-                string name = this.name;
-                GameObject.FindGameObjectWithTag("SceneSelector").GetComponentInChildren<SceneSelectorObject>().ChangeContext(name);
-                GameObject.FindGameObjectWithTag("Portal").GetComponent<SteamVR_LoadLevel>().levelName = name;
+                string name = Tooltip.name;
+                GetComponent<SceneSelectorPortalChanger>().ChangePortalAppearance(name);
+                GetComponent<SceneSelectorPortalChanger>().ChangeTeleporter();
 
                 //Positions the billboard according to player height
                 GameObject camera = GameObject.FindWithTag("MainCamera");
@@ -56,6 +55,7 @@ namespace VRTK
                 StartCoroutine(FadeOut());
                 isShown = false;
                 GameObject.FindGameObjectWithTag("SceneSelector").GetComponentInChildren<SceneSelectorObject>().DisableSystem();
+                //GameObject.FindGameObjectWithTag("Portal").GetComponent<SteamVR_LoadLevel>().levelName = "";
             }
         }
 
