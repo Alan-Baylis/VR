@@ -22,6 +22,10 @@ namespace VRTK
             {
                 StartCoroutine(FadeOut());
                 isShown = false;
+                if(GetComponent<AudioSource>())
+                {
+                    GetComponent<AudioSource>().Stop();
+                }
 
             }
             else
@@ -44,6 +48,11 @@ namespace VRTK
                 StartCoroutine(FadeIn());
                 isShown = true;
 
+                if (GetComponent<AudioSource>())
+                {
+                    GetComponent<AudioSource>().Play();
+                }
+
             }
 
         }
@@ -56,6 +65,10 @@ namespace VRTK
                 isShown = false;
                 GameObject.FindGameObjectWithTag("SceneSelector").GetComponentInChildren<SceneSelectorObject>().DisableSystem();
                 //GameObject.FindGameObjectWithTag("Portal").GetComponent<SteamVR_LoadLevel>().levelName = "";
+                if(GetComponent<AudioSource>())
+                {
+                    GetComponent<AudioSource>().Stop();
+                }
             }
         }
 
