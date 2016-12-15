@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/road.unity
   - enabled: 1
     path: Assets/Scenes/03_360video.unity
+  - enabled: 1
+    path: Assets/Scenes/00_SplashScreen.unity
