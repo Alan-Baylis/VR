@@ -31,6 +31,8 @@ public class MediaDecoderEditor : Editor {
                                                  "Select video",
                                                  "",
                                                  extensions);
+			Repaint();
+			Debug.Log("Video Path: " + mDecoder.mediaPath);
         }
 
         // Show normal inspector (very handy as UnityEvents are pain in the ass to make in Custom Inspector)
