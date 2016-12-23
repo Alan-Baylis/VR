@@ -10,7 +10,7 @@ public class SceneSelectorPortalChanger : MonoBehaviour {
 
     public void ChangePortalAppearance(string text)
     {
-        GameObject.FindGameObjectWithTag("SceneSelector").GetComponentInChildren<SceneSelectorObject>().ChangeContext(name); 
+        GameObject.FindGameObjectWithTag("Portal").GetComponentInChildren<SceneSelectorObject>().ChangeContext(name); 
         GameObject.FindGameObjectWithTag("Portal").GetComponent<Renderer>().material = PortalPic;
     }
 
