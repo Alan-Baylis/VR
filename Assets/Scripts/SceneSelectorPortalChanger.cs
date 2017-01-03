@@ -1,17 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceneSelectorPortalChanger : MonoBehaviour {
+public class SceneSelectorPortalChanger : MonoBehaviour
+{
 
-    public Material PortalPic;
     public string SceneName;
-
 
 
     public void ChangePortalAppearance(string text)
     {
-        GameObject.FindGameObjectWithTag("Portal").GetComponentInChildren<SceneSelectorObject>().ChangeContext(name); 
-        GameObject.FindGameObjectWithTag("Portal").GetComponent<Renderer>().material = PortalPic;
+        GameObject.FindGameObjectWithTag("Portal").GetComponentInChildren<SceneSelectorObject>().ChangeContext(name);
     }
 
 

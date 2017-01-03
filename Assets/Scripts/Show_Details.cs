@@ -12,6 +12,7 @@ namespace VRTK
         protected override void Start()
         {
             Tooltip.GetComponent<CanvasGroup>().alpha = 0;
+            Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = false;
         }
 
         public override void OnInteractableObjectUsed(InteractableObjectEventArgs e)
@@ -32,8 +33,6 @@ namespace VRTK
             {
                 CloseOtherTooltips();
                 string name = Tooltip.name;
-                GetComponent<SceneSelectorPortalChanger>().ChangePortalAppearance(name);
-                GetComponent<SceneSelectorPortalChanger>().ChangeTeleporter();
 
                 //Positions the billboard according to player height
                 GameObject camera = GameObject.FindWithTag("MainCamera");
@@ -63,12 +62,12 @@ namespace VRTK
             {
                 StartCoroutine(FadeOut());
                 isShown = false;
-                GameObject.FindGameObjectWithTag("SceneSelector").GetComponentInChildren<SceneSelectorObject>().DisableSystem();
-                //GameObject.FindGameObjectWithTag("Portal").GetComponent<SteamVR_LoadLevel>().levelName = "";
                 if(GetComponent<AudioSource>())
                 {
                     GetComponent<AudioSource>().Stop();
                 }
+
+                
             }
         }
 
@@ -104,6 +103,8 @@ namespace VRTK
                 Tooltip.GetComponent<CanvasGroup>().alpha = alpha;
                 yield return new WaitForEndOfFrame();
             }
+            Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = true;
+            Tooltip.transform.Find("Teleport Button").GetComponent<Collider>().enabled = true;
         }
 
         IEnumerator FadeOut()
@@ -111,6 +112,8 @@ namespace VRTK
             float alpha = 1.0f;
             float lerp = 0.0f;
 
+            Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = false;
+            Tooltip.transform.Find("Teleport Button").GetComponent<Collider>().enabled = false;
             while (Tooltip.GetComponent<CanvasGroup>().alpha != 0)
             {
                 lerp = Mathf.MoveTowards(lerp, 5, 0.02f);
@@ -118,6 +121,7 @@ namespace VRTK
                 Tooltip.GetComponent<CanvasGroup>().alpha = alpha;
                 yield return new WaitForEndOfFrame();
             }
+            
         }
     }
 }

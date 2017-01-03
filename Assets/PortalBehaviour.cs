@@ -5,7 +5,12 @@ namespace VRTK
 {
     public class PortalBehaviour : VRTK_InteractableObject
     {
+        protected override void Start()
+        {
+            base.Start();
+            GetComponent<Collider>().enabled = false;
 
+        }
         public override void OnInteractableObjectTouched(InteractableObjectEventArgs e)
         {
             base.OnInteractableObjectTouched(e);
