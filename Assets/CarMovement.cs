@@ -1,26 +1,40 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class CarMovement : MonoBehaviour {
-    float speed;
-    float progress;
-    Vector3 current;
+
+    // Displayed in the editor
+    public float speed = 1f;
+    public float verticalOffset = 0f;
+    public List<GameObject> waypoints;
+
+    float progress = 0f;
+    int current = 0;
+
     Vector3 target;
 
     // Use this for initialization
     void Start () {
-        current = this.transform.position;
-        target = GameObject.Find("wp1").transform.position;
-        speed = 0.01f;
-        progress = 0.0f;
+        target = waypoints[current].transform.position;
+        target.y += verticalOffset;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         Debug.Log(this.transform.position);
-        progress += speed * Time.deltaTime;
 
-        this.transform.LookAt(target);
-        this.transform.position = Vector3.Slerp(current, target, progress);
-	}
+        if (current >= waypoints.Count)
+        {
+            this.enabled = false;
+            return;
+        }
+
+        this.transform.position = Vector3.MoveTowards(this.transform.position, target, speed * Time.deltaTime);
+
+        if (Vector3.Distance(this.transform.position, target) < speed)
+        {
+            target = waypoints[++current].transform.position;
+            target.y += verticalOffset;
+        }
+    }
 }
