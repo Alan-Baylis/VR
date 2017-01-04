@@ -3650,7 +3650,7 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 8b12e5f11ecac2b4485bc4621a9f3794, type: 3}
+      objectReference: {fileID: 8300000, guid: 9c7cf8331a5d6314d9a6835b7df6672e, type: 3}
     - target: {fileID: 114000013735820428, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
         type: 2}
       propertyPath: pauseOnExit
@@ -5745,7 +5745,7 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: bf1b802c4ac58694ca640e4ab4ce7b64, type: 3}
+      objectReference: {fileID: 8300000, guid: cd1e6b6e3391cc948865d9613ad4d7dd, type: 3}
     - target: {fileID: 114000013735820428, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
         type: 2}
       propertyPath: pauseOnExit
