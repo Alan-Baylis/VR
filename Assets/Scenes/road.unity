@@ -5935,7 +5935,7 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 3ac957f4d34fefe4b8bedbcd73979732, type: 3}
+      objectReference: {fileID: 8300000, guid: 399498d147c291a439822c665705e4c5, type: 3}
     - target: {fileID: 114000013735820428, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
         type: 2}
       propertyPath: pauseOnExit
