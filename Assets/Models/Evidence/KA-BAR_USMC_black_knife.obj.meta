@@ -1,0 +1,108 @@
+fileFormatVersion: 2
+guid: 165f9d1a5af45d546bf8f4aa77e4b3e2
+timeCreated: 1483526670
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: black_knife_black_knife_blade
+    100002: black_knife_black_knife_handle
+    100004: black_knife_garda_black_knife
+    100006: //RootNode
+    100008: scabbard_down_scabbard
+    100010: scabbard_rivets
+    100012: scabbard_scabbard_top
+    100014: scabbard_threads
+    400000: black_knife_black_knife_blade
+    400002: black_knife_black_knife_handle
+    400004: black_knife_garda_black_knife
+    400006: //RootNode
+    400008: scabbard_down_scabbard
+    400010: scabbard_rivets
+    400012: scabbard_scabbard_top
+    400014: scabbard_threads
+    2300000: black_knife_black_knife_blade
+    2300002: black_knife_black_knife_handle
+    2300004: black_knife_garda_black_knife
+    2300006: scabbard_down_scabbard
+    2300008: scabbard_rivets
+    2300010: scabbard_scabbard_top
+    2300012: scabbard_threads
+    3300000: black_knife_black_knife_blade
+    3300002: black_knife_black_knife_handle
+    3300004: black_knife_garda_black_knife
+    3300006: scabbard_down_scabbard
+    3300008: scabbard_rivets
+    3300010: scabbard_scabbard_top
+    3300012: scabbard_threads
+    4300000: black_knife_black_knife_blade
+    4300002: black_knife_black_knife_handle
+    4300004: black_knife_garda_black_knife
+    4300006: scabbard_down_scabbard
+    4300008: scabbard_rivets
+    4300010: scabbard_scabbard_top
+    4300012: scabbard_threads
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
