@@ -15,12 +15,15 @@ namespace VRTK
 
         private bool hasBeenPlayed = false;
 
+        AudioSource[] sources;
+
 
 
         // Use this for initialization
         void Start()
         {
-
+            //Get every single audio sources in the scene.
+            sources = GameObject.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
         }
 
         void OnTriggerEnter(Collider other)
@@ -29,6 +32,15 @@ namespace VRTK
             {
                 if (playsOnlyOnce && !hasBeenPlayed)
                 {
+                    // Go through audio sources and stop all currently playing triggered audios
+                    foreach (AudioSource audioSource in sources)
+                    {
+                        if (audioSource.isPlaying && audioSource.name != GetComponent<AudioSource>().name && audioSource.name.Contains("AudioTrigger"))
+                        {
+                            audioSource.Stop();
+                        }
+                    }
+
                     StartCoroutine(FadeAudioIn());
                     hasBeenPlayed = true;
                 }
