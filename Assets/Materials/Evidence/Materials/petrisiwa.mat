@@ -6,20 +6,19 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: black_knife_black_knife_bladeMat
+  m_Name: petrisiwa
   m_Shader: {fileID: 4800000, guid: 908b379d4818cd64184b95a21123d909, type: 3}
-  m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_METALLIC _NORMALMAP
+  m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_BLINNPHONG
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
-  stringTagMap:
-    OriginalShader: Standard
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
     - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 2800000, guid: ddd6ce84afc10d3478c131812bc1886b, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -49,7 +48,7 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 2800000, guid: dcdc75ad4539db74d99bc7de134e44df, type: 3}
+        m_Texture: {fileID: 2800000, guid: c2d7e3dc916270d4aafb4322e4951c7e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -102,17 +101,11 @@ Material:
         name: _FogMultiplier
       second: 1
     - first:
-        name: _GlossMapScale
-      second: 1
-    - first:
         name: _Glossiness
-      second: 0.233
-    - first:
-        name: _GlossyReflections
-      second: 1
+      second: 0.5
     - first:
         name: _Metallic
-      second: 1
+      second: 0
     - first:
         name: _Mode
       second: 0
@@ -135,14 +128,8 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
-        name: _SmoothnessTextureChannel
-      second: 0
-    - first:
-        name: _SpecularHighlights
-      second: 1
-    - first:
         name: _SpecularMode
-      second: 2
+      second: 1
     - first:
         name: _SrcBlend
       second: 1
@@ -166,7 +153,7 @@ Material:
       second: 0
     - first:
         name: g_flCubeMapScalar
-      second: 0.9
+      second: 1
     - first:
         name: g_flReflectanceBias
       second: 0
@@ -182,7 +169,7 @@ Material:
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.48213223, g: 0.5147059, b: 0.46929067, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}

@@ -160,6 +160,23 @@ namespace HTC.UnityPlugin.Multimedia
 			}
 		}
 
+        public void SetAwake()
+        {
+            print(LOG_TAG + " Starting to play.");
+            onInitComplete.AddListener(startDecoding);
+            initDecoder(mediaPath);
+        }
+
+        public void ChangeMediaFile(string path)
+        {
+            stopDecoding();
+            mediaPath = path;
+            print(LOG_TAG + " Starting to play.");
+            onInitComplete.AddListener(startDecoding);
+            initDecoder(mediaPath);
+
+        }
+
         //  Video progress is triggered using Update. Progress time would be set by nativeSetVideoTime.
         void Update() {
             switch (decoderState) {
