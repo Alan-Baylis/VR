@@ -15,15 +15,20 @@ namespace VRTK
 
         private bool hasBeenPlayed = false;
 
-        AudioSource[] sources;
+        static AudioSource[] sources;
 
 
 
         // Use this for initialization
         void Start()
         {
-            //Get every single audio sources in the scene.
-            sources = GameObject.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+            if (sources == null || sources.Length == 0)
+            {
+                //Get every single audio sources in the scene.
+                sources = GameObject.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+                Debug.Log("Sources initialized");
+            }
+            
         }
 
         void OnTriggerEnter(Collider other)
@@ -35,7 +40,7 @@ namespace VRTK
                     // Go through audio sources and stop all currently playing triggered audios
                     foreach (AudioSource audioSource in sources)
                     {
-                        if (audioSource.isPlaying && audioSource.name != GetComponent<AudioSource>().name && audioSource.name.Contains("AudioTrigger"))
+                        if (audioSource.isPlaying && audioSource.outputAudioMixerGroup.name == "Narrative" && audioSource.name != GetComponent<AudioSource>().name)
                         {
                             audioSource.Stop();
                         }
