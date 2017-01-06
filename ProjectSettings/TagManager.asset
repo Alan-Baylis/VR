@@ -16,7 +16,7 @@ TagManager:
   - Trigger
   - CameraRig
   - SceneSelector
-  - Portal
+  - AudioHandler
   layers:
   - Default
   - TransparentFX

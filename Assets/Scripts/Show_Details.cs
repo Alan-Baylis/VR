@@ -50,6 +50,8 @@ namespace VRTK
                 if (GetComponent<AudioSource>())
                 {
                     GetComponent<AudioSource>().Play();
+                    // Go through audio sources and stop all currently playing triggered audios
+                    GameObject.FindGameObjectWithTag("AudioHandler").GetComponent<AudioHandlerScript>().StopOtherNarratives(name);
                 }
 
             }

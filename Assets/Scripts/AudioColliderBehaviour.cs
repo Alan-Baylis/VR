@@ -15,19 +15,9 @@ namespace VRTK
 
         private bool hasBeenPlayed = false;
 
-        static AudioSource[] sources;
-
-
-
         // Use this for initialization
         void Start()
         {
-            if (sources == null || sources.Length == 0)
-            {
-                //Get every single audio sources in the scene.
-                sources = GameObject.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
-                Debug.Log("Sources initialized");
-            }
             
         }
 
@@ -38,14 +28,7 @@ namespace VRTK
                 if (playsOnlyOnce && !hasBeenPlayed)
                 {
                     // Go through audio sources and stop all currently playing triggered audios
-                    foreach (AudioSource audioSource in sources)
-                    {
-                        if (audioSource.isPlaying && audioSource.outputAudioMixerGroup.name == "Narrative" && audioSource.name != GetComponent<AudioSource>().name)
-                        {
-                            audioSource.Stop();
-                        }
-                    }
-
+                    GameObject.FindGameObjectWithTag("AudioHandler").GetComponent<AudioHandlerScript>().StopOtherNarratives(name);
                     StartCoroutine(FadeAudioIn());
                     hasBeenPlayed = true;
                 }

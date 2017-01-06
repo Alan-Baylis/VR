@@ -15,7 +15,7 @@ namespace VRTK
             usingObject = currentUsingObject;
 
             GetComponent<AudioSource>().Play();
-              if(activated)
+              if(ButtonSource.isPlaying)
               {
                 Debug.Log("Pausing");
                 ButtonSource.Pause();

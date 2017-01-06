@@ -9,8 +9,11 @@ namespace VRTK
         public override void OnInteractableObjectUsed(InteractableObjectEventArgs e)
         {
             base.OnInteractableObjectUsed(e);
-            TV.GetComponent<HTC.UnityPlugin.Multimedia.MediaDecoder>().ChangeMediaFile("C:\\Users\\ygerg\\Downloads\\Tesoma_haast.mp4");
-        }
+            if (TV.GetComponent<HTC.UnityPlugin.Multimedia.MediaDecoder>())
+            {
+                TV.GetComponent<HTC.UnityPlugin.Multimedia.MediaDecoder>().NextMediaFile();
+            }
 
+        }
     }
 }
