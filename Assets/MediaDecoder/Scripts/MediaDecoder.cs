@@ -162,9 +162,16 @@ namespace HTC.UnityPlugin.Multimedia
 
         public void SetAwake()
         {
-            print(LOG_TAG + " Starting to play.");
-            onInitComplete.AddListener(startDecoding);
-            initDecoder(mediaPath);
+            if(getDecoderState()  == DecoderState.START)
+            {
+                stopDecoding();
+            } else
+            {
+                print(LOG_TAG + " Starting to play.");
+                onInitComplete.AddListener(startDecoding);
+                initDecoder(mediaPath);
+            }
+
         }
 
         public void ChangeMediaFile(string path)
@@ -331,9 +338,11 @@ namespace HTC.UnityPlugin.Multimedia
                     audioSource[i] = gameObject.AddComponent<AudioSource>();
                 }
                 audioSource[i].clip = AudioClip.Create("testSound" + i, audioDataLength, audioChannels, audioFrequency, false);
+                audioSource[i].spatialBlend = 1.0f;
+                audioSource[i].minDistance = 0.1f;
+                audioSource[i].maxDistance = 0.9f;
                 audioSource[i].playOnAwake = false;
                 audioSource[i].volume = volume;
-                audioSource[i].minDistance = audioSource[i].maxDistance;
             }
         }
 		

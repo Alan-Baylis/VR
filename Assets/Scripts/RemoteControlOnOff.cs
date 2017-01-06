@@ -8,20 +8,10 @@ namespace VRKT {
 
         public GameObject TVScreen;
 
-        private bool on = false;
-
         public override void OnInteractableObjectUsed(InteractableObjectEventArgs e)
         {
             base.OnInteractableObjectUsed(e);
-            if(on)
-            {
-                TVScreen.GetComponent<HTC.UnityPlugin.Multimedia.MediaDecoder>().stopDecoding();
-                on = false;
-            } else
-            {
-                TVScreen.GetComponent<HTC.UnityPlugin.Multimedia.MediaDecoder>().SetAwake();
-                on = true;
-            }
+            TVScreen.GetComponent<HTC.UnityPlugin.Multimedia.MediaDecoder>().SetAwake();
             
         }
 
