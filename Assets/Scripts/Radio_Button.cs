@@ -15,15 +15,15 @@ namespace VRTK
             usingObject = currentUsingObject;
 
             GetComponent<AudioSource>().Play();
-              if(ButtonSource.isPlaying)
+              if(activated)
               {
                 Debug.Log("Pausing");
-                ButtonSource.Pause();
+                ButtonSource.GetComponent<RadioBehaviourScript>().TurnRadioOff();
                 activated = false;
               } else
               {
                 Debug.Log("Playin");
-                ButtonSource.Play();
+                ButtonSource.GetComponent<RadioBehaviourScript>().TurnRadioOn();
                 activated = true;
               }
               
