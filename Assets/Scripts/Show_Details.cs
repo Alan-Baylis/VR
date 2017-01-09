@@ -12,7 +12,11 @@ namespace VRTK
         protected override void Start()
         {
             Tooltip.GetComponent<CanvasGroup>().alpha = 0;
-            Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = false;
+            if(Tooltip.transform.Find("Teleport Button"))
+            {
+                Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = false;
+            }
+
         }
 
         public override void OnInteractableObjectUsed(InteractableObjectEventArgs e)
@@ -105,17 +109,24 @@ namespace VRTK
                 Tooltip.GetComponent<CanvasGroup>().alpha = alpha;
                 yield return new WaitForEndOfFrame();
             }
-            Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = true;
-            Tooltip.transform.Find("Teleport Button").GetComponent<Collider>().enabled = true;
+            if (Tooltip.transform.Find("Teleport Button"))
+            {
+                Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = true;
+                Tooltip.transform.Find("Teleport Button").GetComponent<Collider>().enabled = true;
+            }
+
         }
 
         IEnumerator FadeOut()
         {
             float alpha = 1.0f;
             float lerp = 0.0f;
-
-            Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = false;
-            Tooltip.transform.Find("Teleport Button").GetComponent<Collider>().enabled = false;
+            if (Tooltip.transform.Find("Teleport Button"))
+            {
+                Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = false;
+                Tooltip.transform.Find("Teleport Button").GetComponent<Collider>().enabled = false;
+            }
+     
             while (Tooltip.GetComponent<CanvasGroup>().alpha != 0)
             {
                 lerp = Mathf.MoveTowards(lerp, 5, 0.02f);

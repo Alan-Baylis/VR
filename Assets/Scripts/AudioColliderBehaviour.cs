@@ -62,6 +62,10 @@ namespace VRTK
             {
                 StartCoroutine(FadeAudioOut());
             }
+            if(hideOnTrigger)
+            {
+                GetComponent<CapsuleCollider>().enabled = false;
+            }
 
         }
 
