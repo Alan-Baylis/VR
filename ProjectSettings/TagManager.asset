@@ -17,6 +17,7 @@ TagManager:
   - CameraRig
   - SceneSelector
   - AudioHandler
+  - Boundaries
   layers:
   - Default
   - TransparentFX
