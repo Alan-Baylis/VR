@@ -41,16 +41,23 @@ public class NewspaperHandler : MonoBehaviour {
 	}
 
     // When something exit the trigger
+    
     void OnTriggerExit(Collider other)
     {
         // Make new top paper active when previous leaves trigger zone
         if (topPaper == other.gameObject)
         {
-            if (children.Count > 0)
-            {
-                ActivatePaper();
-            }
+            ActivatePaper();
         }
+    }
+
+    void Update()
+    {
+        if (topPaper.GetComponent<VRTK.VRTK_InteractableObject>().IsGrabbed()) 
+        {
+            ActivatePaper();
+        }
+
     }
 
     // Function to make topmost paper active
