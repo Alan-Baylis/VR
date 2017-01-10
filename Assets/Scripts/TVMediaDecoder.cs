@@ -162,7 +162,7 @@ namespace HTC.UnityPlugin.Multimedia
         void Awake()
         {
               print(LOG_TAG + " ver." + VERSION);
-              vidPath = Application.dataPath + "/VideoClips/";
+              vidPath = Application.dataPath + "/Resources/VideoClips/";
               DirectoryInfo dir = new DirectoryInfo(vidPath);
               info = dir.GetFiles("*.mp4");
               foreach (FileInfo file in info)

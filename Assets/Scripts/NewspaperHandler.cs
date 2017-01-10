@@ -71,5 +71,6 @@ public class NewspaperHandler : MonoBehaviour {
         
         // Make newspaper grabbable
         topPaper.GetComponent<VRTK_InteractableObject>().isGrabbable = true;
+        topPaper.GetComponent<VRTK_InteractableObject>().hideControllerOnGrab = VRTK.VRTK_InteractableObject.ControllerHideMode.OverrideHide;
     }
 }
