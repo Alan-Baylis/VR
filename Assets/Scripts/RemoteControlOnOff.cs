@@ -11,7 +11,7 @@ namespace VRKT {
         public override void OnInteractableObjectUsed(InteractableObjectEventArgs e)
         {
             base.OnInteractableObjectUsed(e);
-            TVScreen.GetComponent<HTC.UnityPlugin.Multimedia.MediaDecoder>().SetAwake();
+            TVScreen.GetComponent<HTC.UnityPlugin.Multimedia.TVMediaDecoder>().SetAwake();
             
         }
 

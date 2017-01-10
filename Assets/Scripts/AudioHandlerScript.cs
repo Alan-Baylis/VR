@@ -1,26 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class AudioHandlerScript : MonoBehaviour
 {
 
-    static AudioSource[] sources;
+    private AudioSource[] sources;
 
-    // Use this for initialization
-    void Start()
+    
+
+
+    void Awake()
     {
-        if (sources == null || sources.Length == 0)
-        {
+    
             //Get every single audio sources in the scene.
             sources = GameObject.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
             Debug.Log("Sources initialized");
-        }
-
+        
     }
+
     // Update is called once per frame
     void Update()
     {
-
+     
     }
 
 

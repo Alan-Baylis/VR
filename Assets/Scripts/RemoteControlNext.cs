@@ -9,9 +9,9 @@ namespace VRTK
         public override void OnInteractableObjectUsed(InteractableObjectEventArgs e)
         {
             base.OnInteractableObjectUsed(e);
-            if (TV.GetComponent<HTC.UnityPlugin.Multimedia.MediaDecoder>())
+            if (TV.GetComponent<HTC.UnityPlugin.Multimedia.TVMediaDecoder>())
             {
-                TV.GetComponent<HTC.UnityPlugin.Multimedia.MediaDecoder>().NextMediaFile();
+                TV.GetComponent<HTC.UnityPlugin.Multimedia.TVMediaDecoder>().NextMediaFile();
             }
 
         }

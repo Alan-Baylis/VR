@@ -12,9 +12,9 @@ namespace VRKT
         {
             base.OnInteractableObjectUsed(e);
 
-            if (TV.GetComponent<HTC.UnityPlugin.Multimedia.MediaDecoder>())
+            if (TV.GetComponent<HTC.UnityPlugin.Multimedia.TVMediaDecoder>())
             {
-                TV.GetComponent<HTC.UnityPlugin.Multimedia.MediaDecoder>().PreviousMediaFile();
+                TV.GetComponent<HTC.UnityPlugin.Multimedia.TVMediaDecoder>().PreviousMediaFile();
             }
 
         }

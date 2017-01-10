@@ -28,7 +28,7 @@ namespace VRTK
                 if (playsOnlyOnce && !hasBeenPlayed)
                 {
                     // Go through audio sources and stop all currently playing triggered audios
-                    GameObject.FindGameObjectWithTag("AudioHandler").GetComponent<AudioHandlerScript>().StopOtherNarratives(name);
+                    GameObject.FindGameObjectWithTag("AudioHandler").GetComponent<AudioHandlerScript>().StopOtherNarratives(gameObject.name);
                     StartCoroutine(FadeAudioIn());
                     hasBeenPlayed = true;
                 }

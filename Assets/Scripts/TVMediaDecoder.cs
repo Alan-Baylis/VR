@@ -1,18 +1,20 @@
-//========= Copyright 2015-2016, HTC Corporation. All rights reserved. ===========
+﻿//========= Copyright 2015-2016, HTC Corporation. All rights reserved. ===========
+
 
 using UnityEngine;
+using System.Collections;
 using UnityEngine.Events;
 using System;
 using System.IO;
-using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace HTC.UnityPlugin.Multimedia
 {
     [RequireComponent(typeof(MeshRenderer))]
-    public class MediaDecoder : MonoBehaviour
-    {
+    public class TVMediaDecoder : MonoBehaviour {
+
+
         private const string NATIVE_LIBRARY_NAME = "MediaDecoder";
 
         //  Decoder
@@ -153,17 +155,94 @@ namespace HTC.UnityPlugin.Multimedia
         public float videoTotalTime { get; private set; }   //  Video duration.
         public float audioTotalTime { get; private set; }   //  Audio duration.
 
+        //Video Clips info
+        FileInfo[] info;
+        string vidPath;
 
         void Awake()
         {
-
+              print(LOG_TAG + " ver." + VERSION);
+              vidPath = Application.dataPath + "/VideoClips/";
+              DirectoryInfo dir = new DirectoryInfo(vidPath);
+              info = dir.GetFiles("*.mp4");
+              foreach (FileInfo file in info)
+              {
+                  print(file);
+              }
+              if (info.Length != 0)
+              {
+                  mediaPath = (vidPath + info[0].Name);
+              }
+              
             if (playOnAwake)
             {
-                print(LOG_TAG + " play on wake.");  
+                print(LOG_TAG + " play on wake.");
+
                 onInitComplete.AddListener(startDecoding);
                 initDecoder(mediaPath);
             }
 
+        }
+
+        public void SetAwake()
+        {
+            if (getDecoderState() == DecoderState.START)
+            {
+                stopDecoding();
+            }
+            else
+            {
+                print(LOG_TAG + " Starting to play.");
+                onInitComplete.AddListener(startDecoding);
+                initDecoder(mediaPath);
+            }
+
+        }
+
+        public void NextMediaFile()
+        {
+            stopDecoding();
+            mediaPath = getNextFile();
+            print(LOG_TAG + " Starting to play.");
+            onInitComplete.AddListener(startDecoding);
+            initDecoder(mediaPath);
+
+        }
+
+        public void PreviousMediaFile()
+        {
+            stopDecoding();
+            mediaPath = getPreviousFile();
+            print(LOG_TAG + " Starting to play.");
+            onInitComplete.AddListener(startDecoding);
+            initDecoder(mediaPath);
+
+        }
+
+        private string getNextFile()
+        {
+            for (int i = 0; i < info.Length; ++i)
+            {
+                if (mediaPath == (vidPath + info[i].Name))
+                {
+
+                    return (i == info.Length - 1) ? (vidPath + info[0].Name) : (vidPath + info[i + 1].Name);
+                }
+            }
+            return "";
+        }
+
+        private string getPreviousFile()
+        {
+            for (int i = info.Length - 1; i >= 0; --i)
+            {
+                if (mediaPath == (vidPath + info[i].Name))
+                {
+
+                    return (i == 0) ? (vidPath + info[info.Length - 1].Name) : vidPath + info[i - 1].Name;
+                }
+            }
+            return "";
         }
 
         //  Video progress is triggered using Update. Progress time would be set by nativeSetVideoTime.
