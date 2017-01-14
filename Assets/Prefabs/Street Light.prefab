@@ -72,6 +72,7 @@ GameObject:
   - 4: {fileID: 4000012720347384}
   - 108: {fileID: 108000010742153380}
   - 123: {fileID: 123000010515359682}
+  - 114: {fileID: 114000010929581076}
   m_Layer: 0
   m_Name: Spotlight
   m_TagString: Untagged
@@ -456,6 +457,21 @@ Light:
   m_BounceIntensity: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114000010929581076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013190969924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06c4bc3d2b5041c41a69386be4f6a997, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  exponentiality: 1.5
+  brightness: 4
+  minimumBrightness: 0.1
+  maximumDistance: 250
 --- !u!123 &123000010515359682
 LensFlare:
   m_ObjectHideFlags: 1
@@ -465,11 +481,11 @@ LensFlare:
   m_Enabled: 1
   m_Flare: {fileID: 12100000, guid: e59f068002a7b47858274b3c71e10ea7, type: 2}
   m_Color: {r: 0.99264705, g: 0.98942554, b: 0.87586504, a: 0}
-  m_Brightness: 0.15
+  m_Brightness: 0.25
   m_FadeSpeed: 0.5
   m_IgnoreLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2
   m_Directional: 0
 --- !u!136 &136000010538654238
 CapsuleCollider:
