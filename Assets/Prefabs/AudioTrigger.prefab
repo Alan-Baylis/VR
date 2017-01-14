@@ -74,6 +74,8 @@ GameObject:
   - 136: {fileID: 136000014102667736}
   - 114: {fileID: 114000013735820428}
   - 82: {fileID: 82000012151756242}
+  - 114: {fileID: 114000011444588984}
+  - 114: {fileID: 114000011550733118}
   m_Layer: 0
   m_Name: AudioTrigger
   m_TagString: Trigger
@@ -175,7 +177,7 @@ Transform:
   m_GameObject: {fileID: 1000010945096312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000014266377936}
@@ -188,7 +190,7 @@ Transform:
   m_GameObject: {fileID: 1000010909462228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4000014280793406}
@@ -202,7 +204,7 @@ Transform:
   m_GameObject: {fileID: 1000013159284672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000014266377936}
@@ -215,7 +217,7 @@ Transform:
   m_GameObject: {fileID: 1000013836683932}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000014266377936}
@@ -226,10 +228,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011020027794}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.386, y: 0.719, z: 1.025}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.00008726013, z: -0, w: 1}
+  m_LocalPosition: {x: -0.095, y: 0.82, z: 2.656}
+  m_LocalScale: {x: 2, y: 1, z: 0.01982858}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.01, z: 0}
   m_Children:
   - {fileID: 4000014266377936}
   - {fileID: 4000013409474604}
@@ -244,7 +246,7 @@ Transform:
   m_GameObject: {fileID: 1000010549678264}
   m_LocalRotation: {x: 0.6532815, y: -0.6532815, z: -0.27059805, w: -0.27059805}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.015000002, y: 0.015000002, z: 0.015000004}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_LocalEulerAnglesHint: {x: -45, y: -180, z: -90}
   m_Children: []
   m_Father: {fileID: 4000011963224258}
@@ -257,7 +259,7 @@ Transform:
   m_GameObject: {fileID: 1000011236127284}
   m_LocalRotation: {x: 0.27059805, y: 0.27059805, z: -0.6532815, w: 0.6532815}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.015, y: 0.015, z: 0.015}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_LocalEulerAnglesHint: {x: 45, y: 0, z: -90}
   m_Children: []
   m_Father: {fileID: 4000011963224258}
@@ -270,7 +272,7 @@ Transform:
   m_GameObject: {fileID: 1000013767902568}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -0.715, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
   m_Children:
   - {fileID: 4000010722662464}
@@ -287,7 +289,7 @@ Transform:
   m_GameObject: {fileID: 1000013757283508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 4000010152509592}
@@ -372,9 +374,9 @@ AudioSource:
   m_GameObject: {fileID: 1000011020027794}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243000013787410818, guid: 9f0a73c3822eb5842b77f38a46047904,
+  OutputAudioMixerGroup: {fileID: 243000011650486272, guid: 9f0a73c3822eb5842b77f38a46047904,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: fd24a32740f04404faaa31b2ffea1327, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 24a550e8f3eed69459b4cedc855144d4, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -439,6 +441,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114000011444588984
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011020027794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a687231c22430a45a35ce64551266cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tooltip: {fileID: 0}
+--- !u!114 &114000011550733118
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011020027794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a687231c22430a45a35ce64551266cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tooltip: {fileID: 0}
 --- !u!114 &114000012296386138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -477,6 +503,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playsOnlyOnce: 1
+  pauseOnExit: 0
+  hideOnTrigger: 1
 --- !u!136 &136000014102667736
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -540,7 +568,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 1152754621
+  randomSeed: 679600663
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -2274,7 +2302,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 1739909758
+  randomSeed: 1814606251
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -3968,7 +3996,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 126180891
+  randomSeed: -59228126
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -5722,7 +5750,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 1164207440
+  randomSeed: 1779932210
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -7476,7 +7504,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 1181886914
+  randomSeed: -23001091
   InitialModule:
     serializedVersion: 2
     enabled: 1
@@ -9210,7 +9238,7 @@ ParticleSystem:
   moveWithTransform: 1
   autoRandomSeed: 1
   scalingMode: 1
-  randomSeed: 1233241345
+  randomSeed: -319487209
   InitialModule:
     serializedVersion: 2
     enabled: 1

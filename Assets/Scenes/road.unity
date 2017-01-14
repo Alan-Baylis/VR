@@ -4504,6 +4504,10 @@ Prefab:
       value: 
       objectReference: {fileID: 243000011650486272, guid: 9f0a73c3822eb5842b77f38a46047904,
         type: 2}
+    - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
   m_IsPrefabParent: 0
@@ -5208,28 +5212,11 @@ Prefab:
     - {fileID: 114000010589801718, guid: a0fdf2ed8e4955846ae70db667b77c9d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a0fdf2ed8e4955846ae70db667b77c9d, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1075967100 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000011020027794, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1784563582}
 --- !u!4 &1075967101 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
     type: 2}
   m_PrefabInternal: {fileID: 1784563582}
---- !u!114 &1075967102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1075967100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a687231c22430a45a35ce64551266cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Tooltip: {fileID: 27588980}
 --- !u!1001 &1083122901
 Prefab:
   m_ObjectHideFlags: 0
@@ -6246,39 +6233,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000012151756242, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 24a550e8f3eed69459b4cedc855144d4, type: 3}
-    - target: {fileID: 114000013735820428, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
-        type: 2}
-      propertyPath: pauseOnExit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013735820428, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
-        type: 2}
-      propertyPath: hideOnTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1000011020027794, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
       propertyPath: m_Name
       value: AudioTrigger_Bench
       objectReference: {fileID: 0}
-    - target: {fileID: 82000012151756242, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
+    - target: {fileID: 114000011550733118, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
         type: 2}
-      propertyPath: OutputAudioMixerGroup
+      propertyPath: Tooltip
       value: 
-      objectReference: {fileID: 243000011650486272, guid: 9f0a73c3822eb5842b77f38a46047904,
-        type: 2}
+      objectReference: {fileID: 27588980}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
   m_IsPrefabParent: 0
@@ -6956,47 +6919,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000012151756242, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: cd1e6b6e3391cc948865d9613ad4d7dd, type: 3}
-    - target: {fileID: 114000013735820428, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
-        type: 2}
-      propertyPath: pauseOnExit
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000013735820428, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
-        type: 2}
-      propertyPath: hideOnTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1000011020027794, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
       propertyPath: m_Name
       value: AudioTrigger_AfterMurderSpot
       objectReference: {fileID: 0}
+    - target: {fileID: 114000011444588984, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
+        type: 2}
+      propertyPath: Tooltip
+      value: 
+      objectReference: {fileID: 27588980}
     - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.5414964
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0.01982858
-      objectReference: {fileID: 0}
-    - target: {fileID: 82000012151756242, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
-        type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 243000011650486272, guid: 9f0a73c3822eb5842b77f38a46047904,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
   m_IsPrefabParent: 0
@@ -7072,6 +7007,10 @@ Prefab:
       value: 
       objectReference: {fileID: 243000011650486272, guid: 9f0a73c3822eb5842b77f38a46047904,
         type: 2}
+    - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
   m_IsPrefabParent: 0
@@ -7191,6 +7130,10 @@ Prefab:
       value: 
       objectReference: {fileID: 243000011650486272, guid: 9f0a73c3822eb5842b77f38a46047904,
         type: 2}
+    - target: {fileID: 4000011963224258, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f2e705f2f92dc04593faa8fa2254cd1, type: 2}
   m_IsPrefabParent: 0
@@ -7588,23 +7531,6 @@ MeshCollider:
   serializedVersion: 2
   m_Convex: 0
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1928121835 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1000011020027794, guid: 0f2e705f2f92dc04593faa8fa2254cd1,
-    type: 2}
-  m_PrefabInternal: {fileID: 1487697307}
---- !u!114 &1928121836
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1928121835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a687231c22430a45a35ce64551266cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Tooltip: {fileID: 27588980}
 --- !u!1001 &1928643516
 Prefab:
   m_ObjectHideFlags: 0
