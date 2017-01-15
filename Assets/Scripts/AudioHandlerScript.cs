@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class AudioHandlerScript : MonoBehaviour
 {
-    public GameObject prefab;
+    public GameObject prefab = null;
 
     private AudioSource[] sources;
     private GameObject controller;
@@ -17,10 +17,13 @@ public class AudioHandlerScript : MonoBehaviour
         sources = GameObject.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
         Debug.Log("Sources initialized");
 
-        controller = GameObject.Find("Controller (left)");
-        counter = (GameObject)Instantiate(prefab, transform.position, transform.rotation);
-        counter.transform.parent = controller.transform;
-        //counter.transform.position = controller.transform.position;
+        if (prefab != null)
+        {
+            controller = GameObject.Find("Controller (left)");
+            counter = (GameObject)Instantiate(prefab, transform.position, transform.rotation);
+            counter.transform.parent = controller.transform;
+            //counter.transform.position = controller.transform.position;
+        }
 
     }
 
