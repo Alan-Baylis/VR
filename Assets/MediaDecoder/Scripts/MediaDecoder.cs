@@ -156,6 +156,8 @@ namespace HTC.UnityPlugin.Multimedia
 
         void Awake()
         {
+            //We want to always use videos inside our app
+            mediaPath = Application.dataPath + "/" + mediaPath;
 
             if (playOnAwake)
             {
