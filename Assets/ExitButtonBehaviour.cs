@@ -5,7 +5,17 @@ namespace VRTK
 {
     public class ExitButtonBehaviour : VRTK_InteractableObject
     {
+        public override void OnInteractableObjectTouched(InteractableObjectEventArgs e)
+        {
+            base.OnInteractableObjectTouched(e);
+            GetComponentInChildren<ParticleSystem>().Play();
+        }
 
+        public override void OnInteractableObjectUntouched(InteractableObjectEventArgs e)
+        {
+            base.OnInteractableObjectUntouched(e);
+            GetComponentInChildren<ParticleSystem>().Stop();
+        }
 
         public override void OnInteractableObjectUsed(InteractableObjectEventArgs e)
         {

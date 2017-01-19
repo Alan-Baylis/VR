@@ -267,6 +267,18 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 1355618549}
+    - target: {fileID: 114000014134146258, guid: 20ea83ad2108bc64caaa9300af8f6f6b,
+        type: 2}
+      propertyPath: Menu
+      value: 
+      objectReference: {fileID: 1000012730338594, guid: 979f0523a37754e4983e4964b4e40325,
+        type: 2}
+    - target: {fileID: 114000010594655772, guid: 20ea83ad2108bc64caaa9300af8f6f6b,
+        type: 2}
+      propertyPath: Menu
+      value: 
+      objectReference: {fileID: 1000012730338594, guid: 979f0523a37754e4983e4964b4e40325,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 114000011986534332, guid: 20ea83ad2108bc64caaa9300af8f6f6b, type: 2}
     - {fileID: 114000014213853878, guid: 20ea83ad2108bc64caaa9300af8f6f6b, type: 2}
