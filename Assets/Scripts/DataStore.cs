@@ -1,7 +1,6 @@
-﻿using UnityEditor;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-[InitializeOnLoad]
+
 public class DataStore {
     private static Dictionary<string, System.Object> values = new Dictionary<string, System.Object>();
 

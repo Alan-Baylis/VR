@@ -182,7 +182,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: a235034cbd022134d88df38cd092ceb9, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching: []
@@ -352,7 +352,8 @@ PlayerSettings:
   psp2UseDebugIl2cppLibs: 0
   psmSplashimage: {fileID: 0}
   spritePackerPolicy: 
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    7: 
   metroPackageName: SteamVR_Unity_Toolkit
   metroPackageVersion: 
   metroCertificatePath: 

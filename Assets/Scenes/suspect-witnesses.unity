@@ -90,7 +90,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
---- !u!21 &249684016
+--- !u!21 &79576667
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -119,54 +119,7 @@ Material:
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
---- !u!1001 &1132061044
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114000010704011910, guid: fc72996a5e42e714289d01352d2880ae,
-        type: 2}
-      propertyPath: mediaPath
-      value: Resources/VideoClips/Tesoma_haast.MP4
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
-  m_IsPrefabParent: 0
---- !u!43 &1577588847
+--- !u!43 &172695237
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -294,6 +247,53 @@ Mesh:
   m_BakedConvexCollisionMesh: 
   m_BakedTriangleCollisionMesh: 
   m_MeshOptimized: 0
+--- !u!1001 &1132061044
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000012706080626, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010704011910, guid: fc72996a5e42e714289d01352d2880ae,
+        type: 2}
+      propertyPath: mediaPath
+      value: Resources/360Video/suspects.MP4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &2122865590
 Prefab:
   m_ObjectHideFlags: 0
@@ -337,12 +337,12 @@ Prefab:
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1577588847}
+      objectReference: {fileID: 172695237}
     - target: {fileID: 23000012066635074, guid: 20ea83ad2108bc64caaa9300af8f6f6b,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 249684016}
+      objectReference: {fileID: 79576667}
     - target: {fileID: 224000012359381138, guid: 20ea83ad2108bc64caaa9300af8f6f6b,
         type: 2}
       propertyPath: m_SizeDelta.x

@@ -133,12 +133,12 @@ Prefab:
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 851842164}
+      objectReference: {fileID: 937084005}
     - target: {fileID: 23000012066635074, guid: 20ea83ad2108bc64caaa9300af8f6f6b,
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 513550485}
+      objectReference: {fileID: 441969951}
     - target: {fileID: 224000012876520124, guid: 20ea83ad2108bc64caaa9300af8f6f6b,
         type: 2}
       propertyPath: m_SizeDelta.x
@@ -316,7 +316,7 @@ Prefab:
     - {fileID: 114000014213853878, guid: 20ea83ad2108bc64caaa9300af8f6f6b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 20ea83ad2108bc64caaa9300af8f6f6b, type: 2}
   m_IsPrefabParent: 0
---- !u!21 &513550485
+--- !u!21 &441969951
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -345,7 +345,7 @@ Material:
     - first:
         name: _Color
       second: {r: 1, g: 1, b: 1, a: 1}
---- !u!43 &851842164
+--- !u!43 &937084005
 Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -515,7 +515,7 @@ Prefab:
     - target: {fileID: 114000010704011910, guid: fc72996a5e42e714289d01352d2880ae,
         type: 2}
       propertyPath: mediaPath
-      value: \Resources\edited_siwapub.MP4
+      value: Resources/360Video/Investigation.mp4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc72996a5e42e714289d01352d2880ae, type: 2}
