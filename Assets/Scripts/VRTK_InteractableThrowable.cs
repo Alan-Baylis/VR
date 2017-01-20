@@ -8,7 +8,7 @@ namespace VRTK
     public class VRTK_InteractableThrowable : VRTK_InteractableObject
     {
 
-        public float playThrowSound = 1.0f;
+        public float playThrowSound = 5.0f;
 
         public override void Ungrabbed(GameObject previousGrabbingObject)
         {
@@ -26,7 +26,6 @@ namespace VRTK
 
             if( GetComponent<Rigidbody>().velocity.magnitude > playThrowSound && !GetComponent<AudioSource>().isPlaying )
             {
-                Debug.Log("PlaySOund");
                 GetComponent<AudioSource>().Play();
             }
         }
