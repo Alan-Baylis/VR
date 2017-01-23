@@ -25,7 +25,7 @@ public class CarMovement : MonoBehaviour {
         this.transform.rotation = Quaternion.LookRotation(target - this.transform.position) * directionalOffset;
 
         // Updating next waypoint
-        if (++nextWaypoint >= waypoints.Count) { this.enabled = false; }
+        if (++nextWaypoint >= waypoints.Count) { Object.Destroy(this.gameObject); }
     }
 
     // Use this for initialization
