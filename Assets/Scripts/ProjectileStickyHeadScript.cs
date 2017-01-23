@@ -4,7 +4,7 @@ using System.Collections;
 public class ProjectileStickyHeadScript : MonoBehaviour {
 
     public AudioClip impact;
-
+    public string CollidingWithTag;
     private bool playDelayed = false;
 
     //Add this to a projectile along with a box collider
@@ -16,7 +16,7 @@ public class ProjectileStickyHeadScript : MonoBehaviour {
         }
     }
 
-    public string CollidingWithTag;
+   
 
     void OnTriggerEnter(Collider hit)
     {
@@ -24,13 +24,15 @@ public class ProjectileStickyHeadScript : MonoBehaviour {
         if (hit.GetComponent<Collider>().tag == CollidingWithTag)
         {
             transform.parent.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+
+            if (GetComponent<AudioSource>() != null && playDelayed == false)
+            {
+                GetComponent<AudioSource>().PlayOneShot(impact);
+                StartCoroutine(Delay());
+            }
         }
 
-        if(GetComponent<AudioSource>() != null && playDelayed == false)
-        {
-            GetComponent<AudioSource>().PlayOneShot(impact);
-            StartCoroutine(Delay());
-        }
+
     }
 
     IEnumerator Delay()
