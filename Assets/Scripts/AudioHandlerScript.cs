@@ -6,16 +6,11 @@ public class AudioHandlerScript : MonoBehaviour
 {
     public GameObject prefab = null;
 
-    private AudioSource[] sources;
     private GameObject controller;
     private GameObject counter;
 
     void Awake()
     {
-    
-        //Get every single audio sources in the scene.
-        sources = GameObject.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
-        Debug.Log("Sources initialized");
 
         if (prefab != null)
         {
@@ -33,10 +28,15 @@ public class AudioHandlerScript : MonoBehaviour
      
     }
 
+    public AudioSource[] getAudioSources()
+    {
+        return GameObject.FindObjectsOfType(typeof(AudioSource)) as AudioSource[];
+    }
+
 
     public void StopOtherNarratives(string current)
     {
-        foreach (AudioSource audioSource in sources)
+        foreach (AudioSource audioSource in getAudioSources())
         {
             Debug.Log(audioSource.name);
             if (audioSource.isPlaying && audioSource.outputAudioMixerGroup.name == "Narrative" && audioSource.name != current)
@@ -49,7 +49,7 @@ public class AudioHandlerScript : MonoBehaviour
     // Function to know if narration is playing
     public bool IsNarrationPlaying()
     {
-        foreach (AudioSource audioSource in sources)
+        foreach (AudioSource audioSource in getAudioSources())
         {
             if (audioSource.isPlaying && audioSource.outputAudioMixerGroup.name == "Narrative")
             {
@@ -74,7 +74,7 @@ public class AudioHandlerScript : MonoBehaviour
     // Get the source playing narration
     private AudioSource PlayingSource()
     {
-        foreach (AudioSource audioSource in sources)
+        foreach (AudioSource audioSource in getAudioSources())
         {
             if (audioSource.isPlaying && audioSource.outputAudioMixerGroup.name == "Narrative")
             {
