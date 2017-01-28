@@ -1,47 +1,15 @@
 fileFormatVersion: 2
-guid: 37f77d2945c7e7c45b1d298ddecd62da
-timeCreated: 1484093481
+guid: 87265f7f04622644dab16215d3713ed4
+timeCreated: 1485629993
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Obj_000001
-    100004: Obj_000002
-    100006: Obj_000003
-    100008: Obj_000004
-    100010: Obj_000005
-    100012: Obj_000006
-    100014: Obj_000007
     400000: //RootNode
-    400002: Obj_000001
-    400004: Obj_000002
-    400006: Obj_000003
-    400008: Obj_000004
-    400010: Obj_000005
-    400012: Obj_000006
-    400014: Obj_000007
-    2300000: Obj_000001
-    2300002: Obj_000002
-    2300004: Obj_000003
-    2300006: Obj_000004
-    2300008: Obj_000005
-    2300010: Obj_000006
-    2300012: Obj_000007
-    3300000: Obj_000001
-    3300002: Obj_000002
-    3300004: Obj_000003
-    3300006: Obj_000004
-    3300008: Obj_000005
-    3300010: Obj_000006
-    3300012: Obj_000007
-    4300000: Obj_000001
-    4300002: Obj_000002
-    4300004: Obj_000004
-    4300006: Obj_000007
-    4300008: Obj_000003
-    4300010: Obj_000005
-    4300012: Obj_000006
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: pump
   materials:
     importMaterials: 1
     materialName: 0
@@ -88,7 +56,6 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -99,10 +66,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
-    hasExtraRoot: 0
-    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 0
   humanoidOversampling: 1
