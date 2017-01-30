@@ -14,7 +14,7 @@ public class AudioHandlerScript : MonoBehaviour
 
         if (prefab != null)
         {
-            controller = GameObject.Find("Controller (left)");
+            controller = VRTK.VRTK_DeviceFinder.GetControllerLeftHand();
             counter = (GameObject)Instantiate(prefab, transform.position, transform.rotation);
             counter.transform.parent = controller.transform;
             counter.transform.position = controller.transform.position;
