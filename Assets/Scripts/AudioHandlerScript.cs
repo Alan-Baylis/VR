@@ -17,7 +17,7 @@ public class AudioHandlerScript : MonoBehaviour
             controller = GameObject.Find("Controller (left)");
             counter = (GameObject)Instantiate(prefab, transform.position, transform.rotation);
             counter.transform.parent = controller.transform;
-            //counter.transform.position = controller.transform.position;
+            counter.transform.position = controller.transform.position;
         }
 
     }

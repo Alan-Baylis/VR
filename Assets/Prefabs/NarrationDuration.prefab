@@ -36,8 +36,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013947438474}
-  - 114: {fileID: 114000010315707658}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: NarrationDuration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +45,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1000010906028396
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -78,6 +77,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1000012159334714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 4000010735858306}
+  - 114: {fileID: 114000011389258094}
+  m_Layer: 2
+  m_Name: NarrationDurationTooltip
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1000012990088298
 GameObject:
   m_ObjectHideFlags: 1
@@ -98,7 +113,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &1000013331994242
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -113,6 +128,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4000010735858306
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012159334714}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0.05, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_Children:
+  - {fileID: 4000011329296938}
+  - {fileID: 224000011841075904}
+  m_Father: {fileID: 4000013947438474}
+  m_RootOrder: 0
 --- !u!4 &4000011329296938
 Transform:
   m_ObjectHideFlags: 1
@@ -124,7 +154,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 4000013947438474}
+  m_Father: {fileID: 4000010735858306}
   m_RootOrder: 0
 --- !u!4 &4000013947438474
 Transform:
@@ -132,35 +162,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010386252056}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: -0, z: 0.7}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.181674, y: -16.428291, z: -9.451439}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 90, y: 90, z: 90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 4000011329296938}
-  - {fileID: 224000011841075904}
+  - {fileID: 4000010735858306}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &114000010315707658
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000010386252056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6feb6371bf89af34bb57f9587359a293, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  displayText: 
-  fontSize: 14
-  containerSize: {x: 100, y: 30}
-  drawLineFrom: {fileID: 0}
-  drawLineTo: {fileID: 0}
-  lineWidth: 0.001
-  fontColor: {r: 0.83823526, g: 0.83823526, b: 0.83823526, a: 1}
-  containerColor: {r: 0, g: 0, b: 0, a: 0}
-  lineColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &114000010371059902
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,6 +237,26 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 2
+--- !u!114 &114000011389258094
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012159334714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6feb6371bf89af34bb57f9587359a293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayText: 
+  fontSize: 14
+  containerSize: {x: 100, y: 30}
+  drawLineFrom: {fileID: 0}
+  drawLineTo: {fileID: 0}
+  lineWidth: 0.001
+  fontColor: {r: 0.83823526, g: 0.83823526, b: 0.83823526, a: 1}
+  containerColor: {r: 0, g: 0, b: 0, a: 0}
+  lineColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!114 &114000012266454354
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -412,7 +441,7 @@ RectTransform:
   - {fileID: 224000013574945426}
   - {fileID: 224000013590451926}
   - {fileID: 224000010233119002}
-  m_Father: {fileID: 4000013947438474}
+  m_Father: {fileID: 4000010735858306}
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
