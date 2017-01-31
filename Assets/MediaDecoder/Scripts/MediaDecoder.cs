@@ -355,7 +355,7 @@ namespace HTC.UnityPlugin.Multimedia
                     audioSource[i] = gameObject.AddComponent<AudioSource>();
                 }
                 audioSource[i].clip = AudioClip.Create("testSound" + i, audioDataLength, audioChannels, audioFrequency, false);
-             //   audioSource[i].spatialBlend = 1.0f;
+                //   audioSource[i].spatialBlend = 1.0f;
                 audioSource[i].minDistance = 0.1f;
                 audioSource[i].maxDistance = 0.9f;
                 audioSource[i].playOnAwake = false;
