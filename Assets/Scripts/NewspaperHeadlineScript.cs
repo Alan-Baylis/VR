@@ -31,14 +31,15 @@ public class NewspaperHeadlineScript : MonoBehaviour
             {
                 i = 0;
             }
-            GetComponent<TextMesh>().text = ResolveTextSize(lines[i],33);
+            GetComponent<TMPro.TMP_Text>().text = lines[i];
+                //ResolveTextSize(lines[i],33);
             i += 1;
             yield return new WaitForSeconds(3);
         }
 
     }
 
-    // Wrap text by line height
+    // Wrap text by line height (actually unneccessary with TMPro)
     private string ResolveTextSize(string input, int lineLength)
     {
 

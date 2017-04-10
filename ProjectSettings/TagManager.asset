@@ -19,6 +19,7 @@ TagManager:
   - AudioHandler
   - Boundaries
   - Scenery
+  - Photo
   layers:
   - Default
   - TransparentFX

@@ -98,6 +98,7 @@ namespace HTC.UnityPlugin.Multimedia
 
         private const string VERSION = "1.0.7.161122";
         public bool playOnAwake = false;
+        public bool playAudio = true;
         public string mediaPath = null;             //	Assigned outside.
         public UnityEvent onInitComplete = null;    //  Initialization is asynchronized. It would be invoked after initialization.
         public UnityEvent onVideoEnd = null;        //  It would be invoked on video end.
@@ -297,21 +298,25 @@ namespace HTC.UnityPlugin.Multimedia
                     useDefault = true;
                 }
 
-                //	Initialize audio.
-                isAudioEnabled = nativeIsAudioEnabled(decoderID);
-                print(LOG_TAG + " isAudioEnabled = " + isAudioEnabled);
-                if (isAudioEnabled)
+                if (playAudio)
                 {
-                    if (isAllAudioChEnabled)
+                    //	Initialize audio.
+                    isAudioEnabled = nativeIsAudioEnabled(decoderID);
+                    print(LOG_TAG + " isAudioEnabled = " + isAudioEnabled);
+                    if (isAudioEnabled)
                     {
-                        nativeSetAudioAllChDataEnable(decoderID, isAllAudioChEnabled);
-                        getAudioFormat();
+                        if (isAllAudioChEnabled)
+                        {
+                            nativeSetAudioAllChDataEnable(decoderID, isAllAudioChEnabled);
+                            getAudioFormat();
+                        }
+                        else
+                        {
+                            getAudioFormat();
+                            initAudioSource();
+                        }
                     }
-                    else
-                    {
-                        getAudioFormat();
-                        initAudioSource();
-                    }
+
                 }
 
                 decoderState = DecoderState.INITIALIZED;

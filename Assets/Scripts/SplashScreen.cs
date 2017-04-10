@@ -22,7 +22,7 @@ namespace VRTK
 
         IEnumerator MoveToNextScene()
         {
-            yield return new WaitForSeconds(6);
+            yield return new WaitForSeconds(7);
             GetComponent<SteamVR_LoadLevel>().Trigger();
 
         }

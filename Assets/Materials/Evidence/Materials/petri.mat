@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: petri
-  m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_METALLIC
+  m_Shader: {fileID: 4800000, guid: 908b379d4818cd64184b95a21123d909, type: 3}
+  m_ShaderKeywords: S_RECEIVE_SHADOWS S_SPECULAR_BLINNPHONG
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap:
@@ -163,7 +163,7 @@ Material:
       second: 1
     - first:
         name: _SpecularMode
-      second: 2
+      second: 1
     - first:
         name: _SrcBlend
       second: 1
