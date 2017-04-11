@@ -2,6 +2,7 @@
 namespace VRTK
 {
     using UnityEngine;
+    using UnityEngine.Analytics;
     using System.Collections;
     using System.Collections.Generic;
     using Highlighters;
@@ -357,6 +358,11 @@ namespace VRTK
         /// <param name="currentGrabbingObject">The game object that is currently grabbing this object.</param>
         public virtual void Grabbed(GameObject currentGrabbingObject)
         {
+            Analytics.CustomEvent("objectGrabbed", new Dictionary<string, object>
+            {
+                { "object", gameObject.name }
+            });
+
             if (snappedInSnapDropZone)
             {
                 ToggleSnapDropZone(storedSnapDropZone, false);
@@ -396,6 +402,11 @@ namespace VRTK
         /// <param name="currentUsingObject">The game object that is currently using this object.</param>
         public virtual void StartUsing(GameObject currentUsingObject)
         {
+            Analytics.CustomEvent("objectUsed", new Dictionary<string, object>
+            {
+                { "object", gameObject.name }
+            });
+
             OnInteractableObjectUsed(SetInteractableObjectEvent(currentUsingObject));
             usingObject = currentUsingObject;
         }

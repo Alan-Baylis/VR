@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Analytics;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace VRTK
 {
@@ -28,6 +30,11 @@ namespace VRTK
         public override void OnInteractableObjectUsed(InteractableObjectEventArgs e)
         {
             base.OnInteractableObjectUsed(e);
+
+            Analytics.CustomEvent("levelLoaded", new Dictionary<string, object>
+        {
+            { "name", GetComponent<SteamVR_LoadLevel>().levelName},
+        });
 
             if (GetComponent<SteamVR_LoadLevel>())
             {
