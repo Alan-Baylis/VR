@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using System.Collections;
 
 namespace VRTK
 {
     public class PortalBehaviour : VRTK_InteractableObject
     {
+        public UnityEngine.UI.Button btn;
+
         protected override void Start()
         {
             base.Start();
@@ -14,13 +17,13 @@ namespace VRTK
         public override void OnInteractableObjectTouched(InteractableObjectEventArgs e)
         {
             base.OnInteractableObjectTouched(e);
-            GetComponentInChildren<ParticleSystem>().Play();
+            btn.Select();
         }
 
         public override void OnInteractableObjectUntouched(InteractableObjectEventArgs e)
         {
             base.OnInteractableObjectUntouched(e);
-            GetComponentInChildren<ParticleSystem>().Stop();
+            EventSystem.current.SetSelectedGameObject(null);
         }
         public override void OnInteractableObjectUsed(InteractableObjectEventArgs e)
         {

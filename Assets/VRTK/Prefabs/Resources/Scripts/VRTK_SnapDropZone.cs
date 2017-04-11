@@ -71,6 +71,8 @@ namespace VRTK
         public bool highlightAlwaysActive = false;
         [Tooltip("A string that specifies an object Tag or the name of a Script attached to an object and notifies the snap drop zone that this is a valid object for snapping on release.")]
         public string validObjectWithTagOrClass;
+        [Tooltip("A string that specifies an object prefab that this is a valid object for snapping on release.")]
+        public GameObject validObjectPrefab;
         [Tooltip("A specified VRTK_TagOrScriptPolicyList to use to determine which interactable objects will be snapped to the snap drop zone on release. If a list is provided then the 'Valid Object With Tag Or Class' parameter will be ignored.")]
         public VRTK_TagOrScriptPolicyList validObjectTagOrScriptListPolicy;
         [Tooltip("If this is checked then the drop zone highlight section will be displayed in the scene editor window.")]
@@ -281,7 +283,13 @@ namespace VRTK
         private VRTK_InteractableObject ValidSnapObject(GameObject checkObject, bool grabState)
         {
             var ioCheck = checkObject.GetComponent<VRTK_InteractableObject>();
-            return (ioCheck && ioCheck.IsGrabbed() == grabState && !Utilities.TagOrScriptCheck(checkObject, validObjectTagOrScriptListPolicy, validObjectWithTagOrClass, true) ? ioCheck : null);
+            //If we have only a single valid object prefab
+            if (validObjectPrefab == checkObject) { 
+                return ((ioCheck && ioCheck.IsGrabbed() == grabState) ? ioCheck : null);
+            } else
+            {
+                return (ioCheck && ioCheck.IsGrabbed() == grabState && !Utilities.TagOrScriptCheck(checkObject, validObjectTagOrScriptListPolicy, validObjectWithTagOrClass, true) ? ioCheck : null);
+            }
         }
 
         private string ObjectPath(string name)

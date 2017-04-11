@@ -111,7 +111,7 @@ namespace VRTK
             }
             if (Tooltip.transform.Find("Teleport Button"))
             {
-                Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = true;
+               // Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = true;
                 Tooltip.transform.Find("Teleport Button").GetComponent<Collider>().enabled = true;
             }
 
@@ -123,7 +123,7 @@ namespace VRTK
             float lerp = 0.0f;
             if (Tooltip.transform.Find("Teleport Button"))
             {
-                Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = false;
+                //Tooltip.transform.Find("Teleport Button").GetComponent<Renderer>().enabled = false;
                 Tooltip.transform.Find("Teleport Button").GetComponent<Collider>().enabled = false;
             }
      
