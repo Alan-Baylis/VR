@@ -20,6 +20,7 @@ TagManager:
   - Boundaries
   - Scenery
   - Photo
+  - Dudes
   layers:
   - Default
   - TransparentFX

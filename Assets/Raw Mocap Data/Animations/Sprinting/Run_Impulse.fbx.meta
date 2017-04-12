@@ -185,8 +185,8 @@ ModelImporter:
     - serializedVersion: 16
       name: Run_Impulse
       takeName: Run_Impulse
-      firstFrame: 151
-      lastFrame: 196
+      firstFrame: 157.8
+      lastFrame: 192.1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -194,7 +194,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0

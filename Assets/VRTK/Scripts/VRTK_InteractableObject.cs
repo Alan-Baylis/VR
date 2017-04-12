@@ -358,11 +358,6 @@ namespace VRTK
         /// <param name="currentGrabbingObject">The game object that is currently grabbing this object.</param>
         public virtual void Grabbed(GameObject currentGrabbingObject)
         {
-            Analytics.CustomEvent("objectGrabbed", new Dictionary<string, object>
-            {
-                { "object", gameObject.name }
-            });
-
             if (snappedInSnapDropZone)
             {
                 ToggleSnapDropZone(storedSnapDropZone, false);

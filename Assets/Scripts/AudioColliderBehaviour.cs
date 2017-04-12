@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Analytics;
+using System.Collections.Generic;
+
 namespace VRTK
 {
     public class AudioColliderBehaviour : MonoBehaviour
@@ -25,6 +28,11 @@ namespace VRTK
         {
             if (other.GetComponentInParent<VRTK_PlayerObject>().objectType == VRTK_PlayerObject.ObjectTypes.Headset)
             {
+                Analytics.CustomEvent("audioTriggered", new Dictionary<string, object>
+                    {
+                        { "audioclip", GetComponent<AudioSource>().clip.name}
+                   });
+
                 if (playsOnlyOnce && !hasBeenPlayed)
                 {
                     // Go through audio sources and stop all currently playing triggered audios

@@ -59,7 +59,7 @@ GameObject:
   - 65: {fileID: 65000011389680168}
   - 114: {fileID: 114000010636742348}
   m_Layer: 5
-  m_Name: Exit
+  m_Name: PalaaTakaisin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -916,7 +916,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012730338594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.53299063}
+  m_LocalPosition: {x: 0, y: 0, z: 74.29147}
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -927,7 +927,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.60716534, y: 0.836}
+  m_AnchoredPosition: {x: 83.51531, y: -1.7834053}
   m_SizeDelta: {x: 205.3, y: 89.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224000012615116520

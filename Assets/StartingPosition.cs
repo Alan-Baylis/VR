@@ -9,6 +9,11 @@ public class StartingPosition : MonoBehaviour {
 
         GameObject player = GameObject.FindWithTag("Player");
         player.transform.position = playerSpawn.position;
+
+        if(pos != 1)
+        {
+            GameObject.FindWithTag("Dudes").SetActive(false);
+        }
     }
 	
 	// Update is called once per frame
